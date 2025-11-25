@@ -32,10 +32,21 @@ add_action( 'init', 'divi_toc_load_textdomain' );
  * classic Divi extension bootstrap.
  */
 function divi_toc_register_module() {
+    // Avoid loading the module before Divi has initialized its base classes.
+    if ( class_exists( 'Divi_toc_Module' ) ) {
+        return;
+    }
+
+    if ( ! class_exists( 'ET_Builder_Module' ) ) {
+        return;
+    }
+
     require_once plugin_dir_path( __FILE__ ) . 'includes/class-divi-toc-module.php';
     do_action( 'divi_toc_after_register' );
 }
 add_action( 'divi_extensions_init', 'divi_toc_register_module' );
+// In some environments ET_Builder_Module is available later; ensure we also hook when Divi reports ready.
+add_action( 'et_builder_ready', 'divi_toc_register_module' );
 
 /**
  * Enqueue assets for frontend and builder preview. The module class will

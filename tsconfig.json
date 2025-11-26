@@ -2,13 +2,15 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"]
 }

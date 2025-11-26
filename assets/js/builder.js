@@ -14,7 +14,7 @@
   // Listen for Divi builder events to re-run the front-end script when props change.
   document.addEventListener('et_builder_api_ready', function () {
     if (window.ETBuilderBackend && typeof window.ETBuilderBackend.registerModuleData === 'function') {
-      window.ETBuilderBackend.registerModuleData('divi_toc', {
+      window.ETBuilderBackend.registerModuleData('divi-toc', {
         onChange: function () {
           if (window.diviTOCInit) {
             window.diviTOCInit();

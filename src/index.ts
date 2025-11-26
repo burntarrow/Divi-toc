@@ -6,4 +6,4 @@ import TableOfContentsModule from './components/table-of-contents-module';
 import './components/table-of-contents-module/style.scss';
 import './frontend';
 
-registerModule(TableOfContentsModule);
+registerModule(TableOfContentsModule.metadata.slug, TableOfContentsModule);

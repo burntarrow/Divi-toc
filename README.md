@@ -8,3 +8,13 @@ Key features:
 - Ignore headings by CSS class, minimum heading threshold with fallback message, and nested or flat list rendering.
 - Smooth scrolling with offset, scrollspy highlighting, per-item copy-link buttons, collapsible sections, responsive dropdown mode, sticky presets, and back-to-top helpers.
 - Multiple visual presets (simple, numbered, tree, card, accordion, floating, boxed, raw) and design controls for bullets, indentation, icons, and active styles.
+
+## Development
+
+```
+npm install
+npm run build
+npm test
+```
+
+> Note: if your environment blocks scoped package downloads, configure npm with an accessible registry before running `npm install`.

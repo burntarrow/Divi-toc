@@ -36,6 +36,16 @@ trait ModuleScriptDataTrait {
                 'mode'     => $this->props['back_to_top_mode'],
                 'position' => $this->props['back_to_top_position'],
             ],
+            'design'         => [
+                'listStyle'     => $this->props['list_style'],
+                'indent'        => intval( $this->props['indent'] ),
+                'iconStyle'     => $this->props['icon_style'],
+                'activeColor'   => $this->props['active_color'],
+                'activeBg'      => $this->props['active_background'],
+                'activeBorder'  => $this->props['active_border_color'],
+                'activeWeight'  => $this->props['active_font_weight'],
+                'activeUnderline' => 'on' === $this->props['active_underline'],
+            ],
         ];
     }
 }

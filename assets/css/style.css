@@ -8,6 +8,7 @@
   padding: 1rem;
   border-radius: 6px;
   font-family: inherit;
+  --divi-toc-indent: 16px;
 }
 
 .divi-toc-header {
@@ -37,7 +38,7 @@
 .divi-toc-list,
 .divi-toc-sub-list {
   margin: 0;
-  padding-left: 1rem;
+  padding-left: var(--divi-toc-indent, 16px);
 }
 
 .divi-toc-item {

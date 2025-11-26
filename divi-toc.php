@@ -14,10 +14,38 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+if ( ! defined( 'DIVI_TOC_VERSION' ) ) {
+    define( 'DIVI_TOC_VERSION', '1.0.0' );
+}
+
 // Load translations.
 add_action( 'plugins_loaded', function () {
     load_plugin_textdomain( 'divi-toc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 } );
+
+/**
+ * Enqueue the compiled builder/runtime assets so the module registers with Divi 5
+ * and front-end behaviors are available in the preview.
+ */
+function divi_toc_enqueue_assets() {
+    $base = __FILE__;
+    wp_enqueue_script(
+        'divi_toc_bundle',
+        plugins_url( 'build/index.js', $base ),
+        [],
+        DIVI_TOC_VERSION,
+        true
+    );
+
+    wp_enqueue_style(
+        'divi_toc_styles',
+        plugins_url( 'assets/css/style.css', $base ),
+        [],
+        DIVI_TOC_VERSION
+    );
+}
+add_action( 'divi_extensions_enqueue_scripts', 'divi_toc_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'divi_toc_enqueue_assets' );
 
 // Autoload module classes via Composer when present.
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {

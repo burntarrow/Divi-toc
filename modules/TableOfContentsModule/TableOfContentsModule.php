@@ -17,7 +17,7 @@ class TableOfContentsModule extends \ET_Builder_Module {
     use ModuleStylesTrait;
     use RenderCallbackTrait;
 
-    public $slug       = 'divi_toc';
+    public $slug       = 'divi-toc';
     public $vb_support = 'on';
 
     public static function register() {
@@ -249,6 +249,79 @@ class TableOfContentsModule extends \ET_Builder_Module {
                 'default'         => 'bottom-right',
                 'tab_slug'        => 'general',
                 'toggle_slug'     => 'behavior',
+            ],
+            'list_style' => [
+                'label'           => __( 'List style', 'divi-toc' ),
+                'type'            => 'select',
+                'options'         => [
+                    'disc'    => __( 'Disc', 'divi-toc' ),
+                    'circle'  => __( 'Circle', 'divi-toc' ),
+                    'decimal' => __( 'Numbered', 'divi-toc' ),
+                    'none'    => __( 'None', 'divi-toc' ),
+                ],
+                'default'         => 'disc',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'indent' => [
+                'label'           => __( 'Indentation per level', 'divi-toc' ),
+                'type'            => 'range',
+                'default'         => 16,
+                'range_settings'  => [
+                    'min'  => 0,
+                    'max'  => 64,
+                    'step' => 1,
+                ],
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'icon_style' => [
+                'label'           => __( 'Icon style', 'divi-toc' ),
+                'type'            => 'select',
+                'options'         => [
+                    'chevron'   => __( 'Chevron', 'divi-toc' ),
+                    'dot'       => __( 'Dot', 'divi-toc' ),
+                    'plusminus' => __( 'Plus/Minus', 'divi-toc' ),
+                ],
+                'default'         => 'chevron',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'active_color' => [
+                'label'           => __( 'Active text color', 'divi-toc' ),
+                'type'            => 'color-alpha',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'active_background' => [
+                'label'           => __( 'Active background', 'divi-toc' ),
+                'type'            => 'color-alpha',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'active_border_color' => [
+                'label'           => __( 'Active border color', 'divi-toc' ),
+                'type'            => 'color-alpha',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'active_font_weight' => [
+                'label'           => __( 'Active font weight', 'divi-toc' ),
+                'type'            => 'select',
+                'options'         => [
+                    'normal' => __( 'Normal', 'divi-toc' ),
+                    'bold'   => __( 'Bold', 'divi-toc' ),
+                ],
+                'default'         => 'bold',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
+            ],
+            'active_underline' => [
+                'label'           => __( 'Underline active item', 'divi-toc' ),
+                'type'            => 'yes_no_button',
+                'default'         => 'off',
+                'tab_slug'        => 'advanced',
+                'toggle_slug'     => 'design',
             ],
         ];
     }

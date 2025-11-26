@@ -1,7 +1,7 @@
 /**
  * Entry point registering the Table Of Contents module with Divi 5 and attaching front-end runtime.
  */
-import { registerModule } from '@elegantthemes/module';
+import { registerModule } from './divi-module-shim';
 import TableOfContentsModule from './components/table-of-contents-module';
 import './components/table-of-contents-module/style.scss';
 import './frontend';

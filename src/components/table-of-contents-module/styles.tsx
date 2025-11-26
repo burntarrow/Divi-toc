@@ -1,4 +1,4 @@
-import { ModuleStylesFunction } from '@elegantthemes/module';
+import { ModuleStylesFunction } from '../../divi-module-shim';
 import { TocAttrs } from './types';
 
 export const Styles: ModuleStylesFunction<TocAttrs> = ({ attrs }) => {

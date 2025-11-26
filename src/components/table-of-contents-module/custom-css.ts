@@ -1,4 +1,4 @@
-import { ModuleCustomCssDefinition } from '@elegantthemes/module';
+import { ModuleCustomCssDefinition } from '../../divi-module-shim';
 
 const CustomCSS: ModuleCustomCssDefinition = {
   toc_container: {

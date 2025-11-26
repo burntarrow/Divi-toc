@@ -1,4 +1,4 @@
-import { ModuleSettingsDefinition } from '@elegantthemes/module';
+import { ModuleSettingsDefinition } from '../../divi-module-shim';
 import { TocAttrs } from './types';
 
 const settingsContent: ModuleSettingsDefinition<TocAttrs> = {

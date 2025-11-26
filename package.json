@@ -16,7 +16,6 @@
   "author": "Divi5 Plugins",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@elegantthemes/module": "^1.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-test-renderer": "^18.0.0",

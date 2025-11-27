@@ -33,13 +33,9 @@ add_action( 'plugins_loaded', function () {
 } );
 
 /**
- * 🔥 Register this plugin as a Divi 5 Extension.
+ * Register this plugin as a Divi 5 Extension.
  *
- * This is REQUIRED. Without this, Divi 5 will NOT:
- * - Know your extension exists
- * - Load builder scripts automatically
- * - Load module.json definitions
- * - Register modules
+ * This is what tells Divi 5 to load build/index.js and your module.json files.
  */
 add_filter( 'divi.modules.extensions', function ( $extensions ) {
     $extensions['divi-toc'] = require __DIR__ . '/divi-toc-extension.php';
@@ -48,14 +44,12 @@ add_filter( 'divi.modules.extensions', function ( $extensions ) {
 
 /**
  * Load the PHP modules loader.
- *
- * (This loads TableOfContentsModule.php which contains the module's PHP definition.
- *  Actual Divi 5 JS module registration happens via builder.tsx → registerModule().)
  */
 require_once DIVI_TOC_PLUGIN_DIR . 'modules/Modules.php';
 
 /**
- * Register modules after Divi initializes.
+ * Register PHP-side modules after WordPress init.
+ * (Divi 5 JS side is handled via the extension + build/index.js.)
  */
 add_action( 'init', function () {
     if ( class_exists( '\Divi_toc\Modules\Modules' ) ) {
@@ -64,22 +58,28 @@ add_action( 'init', function () {
 }, 20 );
 
 /**
- * Enqueue FRONT-END scripts & styles.
+ * Enqueue FRONT-END styles.
+ *
+ * Note: Divi 5 will load your JS for the module via the extension build.
+ * We only need to enqueue the shared CSS file here.
  */
 add_action( 'wp_enqueue_scripts', function () {
-    // Webpack front-end bundle
-    wp_enqueue_script(
-        'divi-toc-frontend',
-        DIVI_TOC_PLUGIN_URL . 'build/divi-toc-frontend.js',
-        [],
-        '1.0.0',
-        true
-    );
-
-    // Shared CSS
     wp_enqueue_style(
         'divi-toc',
-        DIVI_TOC_PLUGIN_URL . 'assets/css/divi-toc.css',
+        DIVI_TOC_PLUGIN_URL . 'assets/css/style.css',
+        [],
+        '1.0.0'
+    );
+} );
+
+/**
+ * Optionally enqueue the same CSS in the editor as well.
+ * (No JS here – Divi 5 handles builder JS itself.)
+ */
+add_action( 'enqueue_block_editor_assets', function () {
+    wp_enqueue_style(
+        'divi-toc',
+        DIVI_TOC_PLUGIN_URL . 'assets/css/style.css',
         [],
         '1.0.0'
     );

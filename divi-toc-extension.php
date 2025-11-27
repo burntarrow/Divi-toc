@@ -23,11 +23,15 @@ return [
      * the structure used in the official Divi 5 example modules.
      */
     'assets'      => [
+        // Builder assets must be declared at the extension level so Divi 5 can
+        // load them before rendering the module picker.
         'scripts' => [
-            'index' => 'build/index.js',
+            'builder'  => 'build/divi-toc-builder.js',
+            'frontend' => 'build/divi-toc-frontend.js',
         ],
         'styles'  => [
-            'index' => 'assets/css/index.css',
+            'builder'  => 'assets/css/divi-toc-builder.css',
+            'frontend' => 'assets/css/divi-toc-frontend.css',
         ],
     ],
 
@@ -50,17 +54,6 @@ return [
             // Optional: helps Divi group the module in the builder UI.
             'category' => 'layout',
 
-            // Per-module asset map mirrors the Divi 5 example extension.
-            'assets'   => [
-                'scripts' => [
-                    'builder'  => 'build/divi-toc-builder.js',
-                    'frontend' => 'build/divi-toc-frontend.js',
-                ],
-                'styles'  => [
-                    'builder'  => 'assets/css/divi-toc-builder.css',
-                    'frontend' => 'assets/css/divi-toc-frontend.css',
-                ],
-            ],
         ],
     ],
 ];

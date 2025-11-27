@@ -28,7 +28,7 @@ Build outputs (Webpack entry points):
 ### Divi 5 wiring
 
 - `divi-toc.php` registers the extension definition via the `divi.modules.extensions` filter and enqueues front-end assets for live pages.
-- `divi-toc-extension.php` mirrors the Divi 5 example extension structure, declaring extension-level assets plus per-module builder/front-end scripts and styles.
+- `divi-toc-extension.php` mirrors the Divi 5 example extension structure, declaring extension-level builder/front-end assets so the module picker can register the module as soon as the builder iframe loads.
 - `src/index.ts` exports the module list consumed by both builder and runtime; `src/builder.tsx` registers modules using the available Divi 5 (or legacy) APIs when `divi-toc-builder.js` loads.
 
 ### Legacy Divi 4 code

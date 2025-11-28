@@ -1,0 +1,70 @@
+{
+	"name": "el/content-toggle",
+	"d4Shortcode": "el_content_toggle",
+	"title": "Divi Content Toggle",
+	"titles": "Divi Content Toggle",
+	"category": "module",
+	"moduleIcon": "divi/module-toggle",
+	"attributes": {
+		"module": {
+			"type": "object",
+			"selector": "{{selector}}",
+			"default": {
+				"meta": {
+					"adminLabel": {
+						"desktop": { "value": "Divi Content Toggle" }
+					}
+				}
+			}
+		},
+		"titleOneIcon": {
+			"type": "object",
+			"selector": "{{selector}} .el_content_toggle_off_value .et-pb-icon"
+		},
+		"titleTwoIcon": {
+			"type": "object",
+			"selector": "{{selector}} .el_content_toggle_on_value .et-pb-icon"
+		},
+		"content_one": {
+			"type": "object",
+			"selector": "{{selector}} .el_content_one_toggle.el_content_toggle_text, {{selector}} .el_content_one_toggle.el_content_toggle_text p"
+		},
+		"content_two": {
+			"type": "object",
+			"selector": "{{selector}} .el_content_two_toggle.el_content_toggle_text, {{selector}} .el_content_two_toggle.el_content_toggle_text p"
+		},
+		"contentOneImage": {
+			"type": "object",
+			"elementType": "image",
+			"selector": "{{selector}} .el_content_one_toggle .et_pb_image_wrap img",
+			"styleProps" : {
+				"spacing": { "propertySelectors": {
+					"desktop": { "value": {
+						"margin": "{{selector}} .el_content_one_toggle .et_pb_image_wrap",
+						"padding": "{{selector}} .el_content_one_toggle .et_pb_image_wrap"
+					} }
+				} }
+			}
+		},
+		"contentTwoImage": {
+			"type": "object",
+			"elementType": "image",
+			"selector": "{{selector}} .el_content_two_toggle .et_pb_image_wrap img",
+			"styleProps" : {
+				"spacing": { "propertySelectors": {
+					"desktop": { "value": {
+						"margin": "{{selector}} .el_content_two_toggle .et_pb_image_wrap",
+						"padding": "{{selector}} .el_content_two_toggle .et_pb_image_wrap"
+					} }
+				} }
+			}
+		},
+		"toggle_switch": { "type": "object" },
+		"toggle_title": {
+			"type": "object",
+			"selector": "{{selector}} .el_content_toggle_title_value h1, {{selector}} .el_content_toggle_title_value h2, {{selector}} .el_content_toggle_title_value h3, {{selector}} .el_content_toggle_title_value h4, {{selector}} .el_content_toggle_title_value h5, {{selector}} .el_content_toggle_title_value h6"
+		}
+    },
+    "style": [ "divi-content-toggle-content-toggle" ],
+	"script": [ "divi-content-toggle-content-toggle" ]
+}

@@ -1,0 +1,173 @@
+{
+	"titleOneIcon":  {
+		"innerContent": {
+			"desktop": { "value": {} }
+		},
+		"advanced": {
+			"fontsize": {
+				"desktop": { "value": "24px" }
+			},
+			"color": {
+				"desktop": { "value": "" }
+			}
+		}
+	},
+	"titleTwoIcon":  {
+		"innerContent": {
+			"desktop": { "value": {} }
+		}
+	},
+	"content_one": {
+		"innerContent": {
+			"title": {
+				"desktop": { "value": "" }
+			},
+			"content": {
+				"desktop": { "value": "" }
+			}
+		},
+		"advanced": {
+			"type": {
+				"desktop": { "value": "el_content_one_text" }
+			},
+			"layout": {
+				"desktop": { "value": "-1" }
+			}
+		},
+		"decoration": {
+			"font": {
+				"font": {
+					"desktop": { "value": { "color": "" } }
+				}
+			}
+		}
+	},
+	"content_two": {
+		"innerContent": {
+			"title": {
+				"desktop": { "value": "" }
+			},
+			"content": {
+				"desktop": { "value": "" }
+			}
+		},
+		"advanced": {
+			"type": {
+				"desktop": { "value": "el_content_two_text" }
+			},
+			"layout": {
+				"desktop": { "value": "-1" }
+			}
+		},
+		"decoration": {
+			"font": {
+				"font": {
+					"desktop": { "value": { "color": "" } }
+				}
+			}
+		}
+	},
+	"contentOneImage": {
+		"innerContent": {
+			"desktop": { "value": {
+				"src": "",
+				"alt": ""
+			} }
+		},
+		"decoration": {
+			"spacing": {
+				"desktop": { "value": {
+					"padding": {
+						"syncVertical"   : "on",
+						"syncHorizontal" : "on"
+					}
+				} }
+			},
+			"sizing": {
+				"desktop": { "value": {
+					"width": "100%"
+				} }
+			},
+			"border": {
+				"desktop": { "value": {} }
+			},
+			"boxShadow": {
+				"desktop": { "value": {
+					"position": "outer"
+				} }
+			}
+		},
+		"advanced": {
+			"alignment": {
+				"desktop": { "value": "" }
+			}
+		}
+	},
+	"contentTwoImage": {
+		"innerContent": {
+			"desktop": { "value": {
+				"src": "",
+				"alt": ""
+			} }
+		},
+		"decoration": {
+			"spacing": {
+				"desktop": { "value": {
+					"padding": {
+						"syncVertical"   : "on",
+						"syncHorizontal" : "on"
+					}
+				} }
+			},
+			"sizing": {
+				"desktop": { "value": {
+					"width": "100%"
+				} }
+			},
+			"border": {
+				"desktop": { "value": {} }
+			},
+			"boxShadow": {
+				"desktop": { "value": {
+					"position": "outer"
+				} }
+			}
+		},
+		"advanced": {
+			"alignment": {
+				"desktop": { "value": "" }
+			}
+		}
+	},
+	"toggle_switch": {
+		"advanced": {
+			"alignment": {
+				"desktop": { "value": "center" }
+			},
+			"color_off": {
+				"desktop": { "value": "#000" }
+			},
+			"color_on": {
+				"desktop": { "value": "#eee" }
+			},
+			"bg_color_off": {
+				"desktop": { "value": "#eee" }
+			},
+			"bg_color_on": {
+				"desktop": { "value": "#000" }
+			}
+		}
+	},
+	"toggle_title": {
+		"decoration": {
+			"font": {
+				"font": {
+					"desktop": { "value": {
+						"size": "18px",
+						"headingLevel": "h5"
+					} }
+				}
+			}
+		}
+	}
+}

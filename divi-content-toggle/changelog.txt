@@ -1,0 +1,20 @@
+== Changelog ==
+
+= 1.0.3 =
+Release date: 19th February 2024
+* Improvement: Compatible with the latest version of the WordPress.
+
+= 1.0.2 =
+Release date: 08th February 2021
+* FIXED: Few modules were not working properly when used within content toggle like divi's native gallery module, DP Masonry Gallery etc.
+* FIXED: Toggle not working on visual builder.
+* IMPROVEMENT: Toggle will not display when there is no content in either toggle.
+* IMPROVEMENT: Added default font properties.
+
+= 1.0.1 =
+Release date: 30th September 2020
+* FIXED: Not working properly in case of nested toggles.
+
+= 1.0 =
+Release date: 24th July 2020
+* Initial Release

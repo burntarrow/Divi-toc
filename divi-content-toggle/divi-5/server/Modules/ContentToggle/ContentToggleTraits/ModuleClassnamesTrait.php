@@ -1,0 +1,29 @@
+<?php
+namespace DCT\Modules\ContentToggle\ContentToggleTraits;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Direct access forbidden.' );
+}
+
+use ET\Builder\Packages\Module\Options\Text\TextClassnames;
+use ET\Builder\Packages\Module\Options\Element\ElementClassnames;
+
+trait ModuleClassnamesTrait {
+	public static function module_classnames( $args ) {
+		$classnames_instance = $args['classnamesInstance'];
+		$attrs               = $args['attrs'];
+
+		// Module.
+		$classnames_instance->add(
+			ElementClassnames::classnames( [
+				'attrs' => $attrs['module']['decoration'] ?? [],
+				'attrs' => array_merge(
+					$attrs['module']['decoration'] ?? [],
+					[
+						'link' => $attrs['module']['advanced']['link'] ?? [],
+					]
+				),
+			] )
+		);
+	}
+}

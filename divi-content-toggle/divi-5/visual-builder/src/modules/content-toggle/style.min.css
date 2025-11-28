@@ -1,0 +1,133 @@
+.et-db #et-boc .et-fb-modules-list li.el_content_toggle::before,
+.et-db #et-boc .et-l .et-fb-modules-list li.el_content_toggle::before,
+.et-db #et-boc .et_fb_saved_layouts_list li.el_content_toggle::before {
+	font-family: dashicons;
+	content: "\F215";
+}
+
+.el_content_toggle_button_wrapper + .el_content_one_toggle + .el_content_two_toggle {
+	display: none;
+}
+.el_content_toggle_button_wrapper {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2%;
+}
+.el_content_toggle_button_wrapper.el_content_toggle_center {
+	justify-content: center;
+}
+.el_content_toggle_button_wrapper.el_content_toggle_left {
+	justify-content: flex-start;
+}
+.el_content_toggle_button_wrapper.el_content_toggle_right {
+	justify-content: flex-end;
+}
+
+.el_content_toggle_title_value{
+	display: flex;
+	align-items: center;
+}
+.el_content_toggle_title_value .el-content-toggle-title{
+	flex: 1
+}
+.el_content_toggle_title_value .el-content-toggle-title + .et-pb-icon{
+	margin-left: 5px;
+	width: fit-content;
+}
+.el_content_toggle_title_value h1,
+.el_content_toggle_title_value h2,
+.el_content_toggle_title_value h3,
+.el_content_toggle_title_value h4,
+.el_content_toggle_title_value h5,
+.el_content_toggle_title_value h6 {
+	padding: 0;
+}
+
+.el_content_toggle_title_value {
+	cursor: pointer;
+}
+.el_content_toggle_off_value {
+	margin-right: 12px;
+}
+.el_content_toggle_on_value {
+	margin-left: 12px;
+}
+.el_content_toggle_button {
+	height: 30px;
+}
+
+.el_content_toggle_switch, 
+.el_content_toggle_bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.el_content_toggle_button_inner {
+	position: relative;
+	width: 70px;
+	height: 30px;
+	overflow: hidden;
+	border-radius: 90px;
+}
+.el_content_toggle_field {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 3;
+}
+.el_content_toggle_switch {
+	z-index: 2;
+}
+.el_content_toggle_bg {
+	width: 100%;
+	transition: 0.3s ease all;
+	z-index: 1;
+}
+.el_content_one_toggle .el_content_toggle_text,
+.el_content_one_toggle .el_content_toggle_text p {
+	font-size: 18px;
+	line-height: 1.5;
+}
+.el_content_toggle_image .et_pb_image_wrap img{
+	border: 0 solid;
+}
+
+/* Other Modules Compatibility */
+.el_content_toggle .et_pb_pricing_table .et_pb_dollar_sign {
+	margin-left: 0!important;
+	left: 0;
+	transform: translateX(-100%);
+}
+
+.el_content_toggle .et_pb_pricing_table .et_pb_et_price {
+	display: inline-block;
+	position: relative;
+}
+
+/* Toggle Layout 1 */
+.layout1 .el_content_toggle_switch:before {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+.layout1 .el_content_toggle_field:checked + .el_content_toggle_switch:before {
+	left: 44px;
+}
+
+.layout1 .el_content_toggle_switch, 
+.layout1 .el_content_toggle_switch:before, 
+.layout1 .el_content_toggle_toggle_bg {
+	transition: 0.3s ease all;
+}

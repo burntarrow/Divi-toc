@@ -1,0 +1,9 @@
+{
+	"name": "divi/divi-content-toggle",
+	"autoload": {
+		"psr-4": {
+		    "DCT\\Modules\\": "server/Modules/"
+		}
+	},
+	"require": {}
+}

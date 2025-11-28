@@ -1,9 +1,12 @@
-const { addAction } = window?.vendor?.wp?.hooks;
+const { addAction } = window?.vendor?.wp?.hooks || {};
+const { registerModule } = window?.divi?.moduleLibrary || {};
 
-import { TableOfContents, TableOfContentsMetadata } from './table-of-contents';
+import tableOfContentsModule from './table-of-contents';
 
-const { registerModule } = window?.divi?.moduleLibrary;
-
-addAction( 'divi.moduleLibrary.registerModuleLibraryStore.after', 'divi-toc', () => {
-        registerModule( TableOfContentsMetadata, TableOfContents );
-} );
+addAction?.(
+  'divi.moduleLibrary.registerModuleLibraryStore.after',
+  'divi-toc',
+  () => {
+    registerModule?.(tableOfContentsModule.metadata, tableOfContentsModule);
+  }
+);

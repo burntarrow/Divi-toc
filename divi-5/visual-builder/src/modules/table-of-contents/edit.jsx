@@ -1,26 +1,27 @@
 import React from 'react';
 
-import { ModuleStyles } from './module-styles';
-import { ModuleScriptData } from './module-script-data';
-import { moduleClassnames } from './module-classnames';
+const Edit = ({ attrs = {} }) => {
+  const headingLevels = attrs.headingLevels ?? [];
+  const includePageTitle = Boolean(attrs.includePageTitle);
+  const nested = attrs.nested !== false;
 
-const { ModuleContainer } = window?.divi?.module;
+  return (
+    <div className="divi-toc-builder" aria-label="Table of contents">
+      <strong>Divi TOC</strong>
+      <p>This is the TOC module placeholder in the Visual Builder.</p>
+      <ul>
+        <li>
+          Include page title: <strong>{includePageTitle ? 'Yes' : 'No'}</strong>
+        </li>
+        <li>
+          Heading levels: <strong>{headingLevels.join(', ') || 'None selected'}</strong>
+        </li>
+        <li>
+          Structure: <strong>{nested ? 'Nested' : 'Flat'}</strong>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-export const TableOfContentsEdit = ( {
-        attrs,
-        elements,
-        id,
-        name,
-} ) => (
-        <ModuleContainer
-                attrs={attrs}
-                elements={elements}
-                id={id}
-                name={name}
-                scriptDataComponent={ModuleScriptData}
-                stylesComponent={ModuleStyles}
-                classnamesFunction={moduleClassnames}
-        >
-                <nav className="divi-toc-placeholder">Table of Contents placeholder</nav>
-        </ModuleContainer>
-);
+export default Edit;

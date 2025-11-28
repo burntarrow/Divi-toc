@@ -1,3 +1,4 @@
-import React from 'react';
+// Design settings placeholder for future styling controls.
+const settingsDesign = {};
 
-export const SettingsDesign = () => null;
+export default settingsDesign;

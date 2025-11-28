@@ -1,16 +1,13 @@
 {
-        "module": {
-                "meta": {
-                        "adminLabel": {
-                                "desktop": { "value": "Divi TOC" }
-                        }
-                }
-        },
-        "content": {
-                "innerContent": {
-                        "body": {
-                                "desktop": { "value": "" }
-                        }
-                }
-        }
+  "module": {
+    "meta": {
+      "adminLabel": {
+        "desktop": { "value": "Divi TOC" }
+      }
+    }
+  },
+  "content": {},
+  "includePageTitle": false,
+  "headingLevels": ["h2", "h3", "h4", "h5"],
+  "nested": true
 }

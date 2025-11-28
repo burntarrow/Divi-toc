@@ -1,3 +1,4 @@
-import React from 'react';
+// Advanced settings placeholder for custom CSS, conditions, etc.
+const settingsAdvanced = {};
 
-export const SettingsAdvanced = () => null;
+export default settingsAdvanced;

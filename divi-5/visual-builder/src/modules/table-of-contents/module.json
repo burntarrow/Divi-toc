@@ -1,27 +1,41 @@
 {
-        "name": "el/table-of-contents",
-        "d4Shortcode": "el_table_of_contents",
-        "title": "Divi TOC",
-        "titles": "Divi TOC",
-        "category": "module",
-        "moduleIcon": "divi/module-list",
-        "attributes": {
-                "module": {
-                        "type": "object",
-                        "selector": "{{selector}}",
-                        "default": {
-                                "meta": {
-                                        "adminLabel": {
-                                                "desktop": { "value": "Divi TOC" }
-                                        }
-                                }
-                        }
-                },
-                "content": {
-                        "type": "object",
-                        "selector": "{{selector}} .divi-toc-placeholder"
-                }
-        },
-        "style": [],
-        "script": []
+  "slug": "el/divi-toc",
+  "title": "Divi TOC",
+  "name": "Divi TOC",
+  "category": "layout",
+  "moduleIcon": "divi/module-list",
+  "attributes": {
+    "module": {
+      "type": "object",
+      "selector": "{{selector}}",
+      "default": {
+        "meta": {
+          "adminLabel": {
+            "desktop": { "value": "Divi TOC" }
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "selector": "{{selector}} .divi-toc-placeholder"
+    },
+    "includePageTitle": {
+      "type": "boolean",
+      "default": false
+    },
+    "headingLevels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": ["h2", "h3", "h4", "h5"]
+    },
+    "nested": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "style": [],
+  "script": []
 }

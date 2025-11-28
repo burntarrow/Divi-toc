@@ -1,21 +1,21 @@
-import { TableOfContentsEdit } from './edit';
 import metadata from './module.json';
-import moduleDefaultRenderAttributes from './module-default-render-attributes.json';
-import { SettingsAdvanced } from './settings-advanced';
-import { SettingsContent } from './settings-content';
-import { SettingsDesign } from './settings-design';
+import defaultAttrs from './module-default-render-attributes.json';
+import Edit from './edit';
+import settingsContent from './settings-content';
+import settingsDesign from './settings-design';
+import settingsAdvanced from './settings-advanced';
 
-export const TableOfContentsMetadata = metadata;
-
-export const TableOfContents = {
-        metadata: TableOfContentsMetadata,
-        defaultAttrs: moduleDefaultRenderAttributes,
-        renderers: {
-                edit: TableOfContentsEdit,
-        },
-        settings: {
-                content: SettingsContent,
-                design: SettingsDesign,
-                advanced: SettingsAdvanced,
-        },
+const TableOfContentsModule = {
+  metadata,
+  defaultAttrs,
+  renderers: {
+    edit: Edit,
+  },
+  settings: {
+    content: settingsContent,
+    design: settingsDesign,
+    advanced: settingsAdvanced,
+  },
 };
+
+export default TableOfContentsModule;

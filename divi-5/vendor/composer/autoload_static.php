@@ -9,14 +9,14 @@ class ComposerStaticInitbd47dd9853e157ef20628fb141065cf7
     public static $prefixLengthsPsr4 = array (
         'D' => 
         array (
-            'DiviTOC\\Modules\\' => 16,
+            'DiviTOC\\Divi5\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'DiviTOC\\Modules\\' => 
+        'DiviTOC\\Divi5\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/server/Modules',
+            0 => __DIR__ . '/../..' . '/server',
         ),
     );
 

@@ -8,11 +8,11 @@
   const { Fragment, createElement } = React || {};
 
   const metadata = {
-    name: "el/table-of-contents",
-    d4Shortcode: "el_table_of_contents",
+    slug: "divi_toc",
+    name: "Divi TOC",
     title: "Divi TOC",
     titles: "Divi TOC",
-    category: "module",
+    category: "layout",
     moduleIcon: "divi/module-list",
     attributes: {
       module: {
@@ -29,6 +29,21 @@
       content: {
         type: "object",
         selector: "{{selector}} .divi-toc-placeholder"
+      },
+      includePageTitle: {
+        type: "boolean",
+        default: false
+      },
+      headingLevels: {
+        type: "array",
+        items: {
+          type: "string"
+        },
+        default: ["h2", "h3", "h4", "h5"]
+      },
+      nested: {
+        type: "boolean",
+        default: true
       }
     },
     style: [],
@@ -43,13 +58,10 @@
         }
       }
     },
-    content: {
-      innerContent: {
-        body: {
-          desktop: { value: "" }
-        }
-      }
-    }
+    content: {},
+    includePageTitle: false,
+    headingLevels: ["h2", "h3", "h4", "h5"],
+    nested: true
   };
 
   const ModuleStyles = ({ attrs, elements, settings, orderClass, mode, state, noStyleTag }) => {

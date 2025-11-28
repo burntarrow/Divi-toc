@@ -2,7 +2,7 @@
     "name": "divi/divi-toc",
     "autoload": {
         "psr-4": {
-            "DiviTOC\\Modules\\": "server/Modules/"
+            "DiviTOC\\Divi5\\": "server/"
         }
     },
     "require": {}

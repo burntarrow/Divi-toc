@@ -8,11 +8,11 @@
  *  - Adding the TableOfContents dependency
  */
 
-namespace Divi_toc\divi-5\Server\Modules;
+namespace DiviTOC\Divi5\Server\Modules;
 
 defined( 'ABSPATH' ) || exit;
 
-use Divi_toc\divi-5\Server\Modules\TableOfContents\TableOfContents;
+use DiviTOC\Divi5\Server\Modules\TableOfContents\TableOfContents;
 
 class Modules {
 

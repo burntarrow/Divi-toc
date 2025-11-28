@@ -3,7 +3,7 @@
  * Divi TOC – TableOfContents Module (Divi 5 server-side)
  */
 
-namespace Divi_toc\divi-5\Server\Modules\TableOfContents;
+namespace DiviTOC\Divi5\Server\Modules\TableOfContents;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -21,9 +21,9 @@ class TableOfContents implements DependencyInterface {
 	 * @return array Modified dependencies.
 	 */
 	public function load( array $dependencies ): array {
-		// Path to the module folder that contains module.json, etc.
-		// Adjust this if your structure differs.
-		$module_dir = dirname( __DIR__, 3 ) . '/visual-builder/src/modules/table-of-contents';
+                // Path to the module folder that contains module.json, etc.
+                // Adjust this if your structure differs.
+                $module_dir = trailingslashit( DIVI_TOC_PLUGIN_DIR ) . 'divi-5/visual-builder/src/modules/table-of-contents';
 
 		if ( ! class_exists( ModuleRegistration::class ) ) {
 			// If Divi 5's ModuleRegistration isn't available, bail gracefully.

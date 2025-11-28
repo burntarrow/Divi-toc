@@ -14,17 +14,8 @@ defined( 'ABSPATH' ) || exit;
 /**
  * IMPORTANT: make sure this matches the namespace + class
  * you use in Divi_toc/divi-5/server/Modules/Modules.php.
- *
- * Example expected definition:
- *   namespace Divi_toc\Divi5\Server\Modules;
- *
- *   class Modules {
- *       public static function register() {
- *           // Hook into divi_module_library_modules_dependency_tree etc.
- *       }
- *   }
  */
-const DIVI_TOC_D5_MODULES_CLASS = '\\Divi_toc\\divi-5\\Server\\Modules\\Modules';
+const DIVI_TOC_D5_MODULES_CLASS = '\\DiviTOC\\Divi5\\Server\\Modules\\Modules';
 
 /**
  * Derive plugin root path/URL from this file.
@@ -45,6 +36,13 @@ if ( ! defined( 'DIVI_TOC_PLUGIN_URL' ) ) {
 
 if ( ! defined( 'DIVI_TOC_VERSION' ) ) {
     define( 'DIVI_TOC_VERSION', '1.0.0' );
+}
+
+// Composer autoload for server-side classes.
+$divi_toc_autoload = __DIR__ . '/vendor/autoload.php';
+
+if ( file_exists( $divi_toc_autoload ) ) {
+    require_once $divi_toc_autoload;
 }
 
 /**
@@ -80,7 +78,7 @@ add_action(
     'init',
     function () {
         if ( class_exists( DIVI_TOC_D5_MODULES_CLASS ) ) {
-            // \Divi_toc\Divi5\Server\Modules\Modules::register()
+            // \DiviTOC\Divi5\Server\Modules\Modules::register()
             call_user_func( [ DIVI_TOC_D5_MODULES_CLASS, 'register' ] );
         } else {
             // In dev you can log this if the namespace/class is wrong.

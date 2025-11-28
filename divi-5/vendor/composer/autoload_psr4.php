@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'DiviTOC\\Modules\\' => array($baseDir . '/server/Modules'),
+    'DiviTOC\\Divi5\\' => array($baseDir . '/server'),
 );
